@@ -1,0 +1,30 @@
+@import url("blackjack-v2.css");
+
+/* Layout compatto per PC portatili */
+main{display:grid;max-width:1440px;padding:12px;grid-template-columns:minmax(0,1fr) 320px;gap:10px 14px}
+.table{min-height:410px;padding:18px 32px;border-radius:120px 120px 24px 24px}
+.shoe{right:22px;top:22px;width:84px;padding:8px}
+.shoe strong{font-size:1.25rem}
+.hand{min-height:118px}
+.cards{min-height:76px;margin-top:5px;gap:7px}
+.card{width:54px;height:76px;padding:5px;font-size:.98rem}
+.card .suit{font-size:1.35rem;margin-top:6px}
+.card.back{border-width:4px}
+.message{min-height:30px;margin:0 auto 4px;padding:4px 10px;font-size:1.05rem}
+.controls button,.bet-actions button,.danger{padding:8px 11px}
+.dashboard{grid-template-columns:1fr;margin:0;gap:10px}
+.panel{padding:14px}
+.bet-total{font-size:1.5rem;margin:3px 0 10px}
+.chip{width:43px;height:43px}
+.bet-actions{margin-top:10px}
+.stats{grid-template-columns:1fr 1fr;gap:6px;margin-top:10px}
+.stats div{padding:8px}
+.rules{font-size:.76rem}
+
+@media(max-width:800px){
+  main{display:block;max-width:760px;padding:10px}
+  .table{min-height:430px;padding:22px 12px;border-radius:90px 90px 20px 20px}
+  .dashboard{display:grid;grid-template-columns:1fr;margin-top:10px}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .rules{margin-top:8px}
+}
