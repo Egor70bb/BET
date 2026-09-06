@@ -18,8 +18,9 @@
       <div class="wheel-panel panel">
         <div class="wheel-wrap">
           <div class="wheel" id="wheel" aria-label="Ruota della roulette">
+            <div class="wheel-numbers" id="wheelNumbers" aria-hidden="true"></div>
             <div class="wheel-label" id="wheelLabel"><span>BET</span><strong>•</strong></div>
-            <div class="ball" id="ball"></div>
+            <div class="ball-track" id="ballTrack"><div class="ball" id="ball"></div></div>
           </div>
         </div>
         <div class="result" id="result" aria-live="polite">Piazza le fiches</div>
@@ -30,6 +31,7 @@
       <div class="table-panel panel">
         <div class="section-head"><div><span class="eyebrow">TAVOLO</span><h1>Scegli le tue puntate</h1></div><div class="current-bet">Sul tavolo <strong id="totalBet">€ 0,00</strong></div></div>
         <div class="roulette-table" id="table" aria-label="Tavolo delle puntate"></div>
+        <p class="inside-hint"><span class="marker-demo"></span> I punti dorati consentono di puntare su cavalli, terzine, carré e sestine.</p>
         <div class="chip-rack" aria-label="Selezione fiches">
           <span class="rack-label">Fiches</span>
           <button class="chip chip-2 selected" draggable="true" data-value="2" aria-label="Fiche da 2 euro">2</button>
