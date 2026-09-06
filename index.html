@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="BET — simulatore gratuito di roulette francese con generatore casuale crittograficamente sicuro.">
   <title>BET — Roulette francese</title>
-  <link rel="stylesheet" href="bet-v5.css">
+  <link rel="stylesheet" href="bet-v6.css">
 </head>
 <body>
   <header class="topbar">
@@ -22,12 +22,12 @@
         <div class="wheel-wrap">
           <div class="wheel" id="wheel" aria-label="Ruota della roulette">
             <div class="wheel-numbers" id="wheelNumbers" aria-hidden="true"></div>
-            <div class="wheel-label" id="wheelLabel"><span>BET</span><strong>•</strong></div>
+            <div class="wheel-label" id="wheelLabel"><button id="spin" class="wheel-spin" aria-label="Fai girare la roulette">BET</button><strong>•</strong></div>
             <div class="ball-track" id="ballTrack"><div class="ball" id="ball"></div></div>
           </div>
         </div>
         <div class="result" id="result" aria-live="polite">Piazza le fiches</div>
-        <button class="spin primary" id="spin">GIRA</button>
+        <button class="primary rebet-main" id="repeatBet">RIPETI PUNTATA</button>
         <p class="rng-note"><span class="lock">◆</span> Estrazione con <code>crypto.getRandomValues()</code></p>
       </div>
 
@@ -42,7 +42,6 @@
           <button class="chip chip-50" draggable="true" data-value="50" aria-label="Fiche da 50 euro">50</button>
           <div class="table-actions">
             <button id="clearBet">Ritira fiches</button>
-            <button id="repeatBet">Ripeti puntata</button>
           </div>
         </div>
       </div>
