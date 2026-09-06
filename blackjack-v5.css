@@ -1,0 +1,18 @@
+@import url("blackjack-v4.css");
+
+.card>.suit{display:none}
+.pip-grid{position:absolute;inset:20px 9px;display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:1fr;align-items:center;justify-items:center;font:normal .72rem Georgia;line-height:1}
+.pip-grid .pip{font-style:normal}
+.pips-2,.pips-3{grid-template-columns:1fr}
+.pips-2 .pip-1,.pips-3 .pip-1{align-self:start}
+.pips-2 .pip-2,.pips-3 .pip-3{align-self:end;transform:rotate(180deg)}
+.pips-3 .pip-2{align-self:center}
+.pips-4,.pips-5,.pips-6,.pips-7,.pips-8,.pips-9,.pips-10{grid-template-columns:repeat(3,1fr)}
+.pips-4 .pip:nth-child(odd),.pips-5 .pip:nth-child(odd),.pips-6 .pip:nth-child(odd){grid-column:1}
+.pips-4 .pip:nth-child(even),.pips-5 .pip:nth-child(even),.pips-6 .pip:nth-child(even){grid-column:3}
+.pips-5 .pip-5{grid-column:2;grid-row:2}
+.ace-pip{font:normal 1.9rem Georgia}
+.face-card{display:grid;place-items:center;line-height:1}
+.face-card b{font:700 1.8rem Georgia}
+.face-card i{font:normal 1.25rem Georgia}
+@media(max-width:800px){.pip-grid{font-size:.66rem;inset:19px 8px}}
