@@ -1,0 +1,12 @@
+@import url("blackjack-v3.css");
+
+.card{position:relative;display:flex;align-items:center;justify-content:center;padding:4px}
+.card .corner{position:absolute;top:5px;left:6px;display:flex;gap:2px;align-items:center;font:700 .92rem Georgia}
+.card .corner.bottom{top:auto;left:auto;right:6px;bottom:5px;transform:rotate(180deg)}
+.card .suit{display:block;margin:0;font-size:1.65rem;text-align:center}
+.split-hands{display:flex;justify-content:center;align-items:flex-start;gap:18px;width:100%;flex-wrap:wrap}
+.split-hand{min-width:150px;padding:5px 10px;border:1px solid transparent;border-radius:12px;text-align:center}
+.split-hand.active{border-color:var(--gold);background:#001b143d}
+.split-label{display:block;margin-bottom:3px;color:#c6d5ce;font-size:.72rem;font-weight:900;letter-spacing:.1em}
+.split-hand .cards{min-height:76px;margin:0}
+@media(max-width:800px){.split-hands{gap:6px}.split-hand{min-width:130px;padding:4px}.card .corner{font-size:.82rem}}
