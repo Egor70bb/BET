@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta name="description" content="BET — Black Jack gratuito con banco e sabot da due mazzi.">
+  <title>BET — Black Jack</title><link rel="stylesheet" href="blackjack.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark">B</span><div><strong>BET</strong><small>Black Jack · 2 mazzi</small></div></div>
+    <div class="top-actions"><a class="game-nav" href="index.html">ROULETTE</a><div class="balance-card"><span>Disponibile</span><strong id="balance">€ 0,00</strong></div></div>
+  </header>
+  <main>
+    <section class="table">
+      <div class="shoe"><span>SABOT</span><strong id="shoeCount">104</strong><small>carte rimaste</small></div>
+      <div class="hand dealer"><div class="hand-title"><span>BANCO</span><strong id="dealerScore">—</strong></div><div class="cards" id="dealerCards"></div></div>
+      <div class="message" id="message" aria-live="polite">Scegli la puntata e distribuisci</div>
+      <div class="hand player"><div class="hand-title"><span>GIOCATORE</span><strong id="playerScore">—</strong></div><div class="cards" id="playerCards"></div></div>
+      <div class="controls">
+        <button class="primary" id="deal">DISTRIBUISCI</button><button id="hit">CARTA</button><button id="stand">STAI</button><button id="double">RADDOPPIA</button>
+      </div>
+    </section>
+    <section class="dashboard">
+      <div class="panel bet-panel"><span class="eyebrow">PUNTATA</span><div class="bet-total" id="bet">€ 0,00</div><div class="chips"><button class="chip c2" data-value="2">2</button><button class="chip c5" data-value="5">5</button><button class="chip c10" data-value="10">10</button><button class="chip c50" data-value="50">50</button></div><div class="bet-actions"><button id="clearBet">Azzera puntata</button><button id="repeatBet">Ripeti puntata</button></div></div>
+      <div class="panel"><div class="panel-head"><div><span class="eyebrow">SESSIONE</span><h2>Bilancio</h2></div><button class="danger" id="reset">Azzera tutto</button></div><div class="stats"><div><span>Vinto / perso</span><strong id="profit">€ 0,00</strong></div><div><span>Mani vinte</span><strong id="wins">0</strong></div><div><span>Mani perse</span><strong id="losses">0</strong></div><div><span>Pareggi</span><strong id="pushes">0</strong></div><div><span>Totale puntato</span><strong id="wagered">€ 0,00</strong></div></div></div>
+    </section>
+    <p class="rules">2 mazzi · Banco fermo a 17 · Black Jack 3:2 · Raddoppio sulle prime due carte</p>
+  </main>
+  <dialog id="depositDialog"><form id="depositForm"><span class="eyebrow">NUOVA SESSIONE</span><h2>Imposta il deposito</h2><p>Denaro virtuale, senza registrazione e senza pagamenti reali.</p><label for="deposit">Deposito iniziale (€)</label><input id="deposit" type="number" min="2" max="10000000" step="1" value="1000" required autofocus><button class="primary">Inizia a giocare</button></form></dialog>
+  <script src="blackjack.js"></script>
+</body></html>
