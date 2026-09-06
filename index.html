@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="BET — simulatore gratuito di roulette francese con generatore casuale crittograficamente sicuro.">
+  <title>BET — Roulette francese</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark">B</span><div><strong>BET</strong><small>Roulette francese</small></div></div>
+    <div class="balance-card"><span>Disponibile</span><strong id="balance">€ 0,00</strong></div>
+  </header>
+
+  <main>
+    <section class="game-grid">
+      <div class="wheel-panel panel">
+        <div class="wheel-wrap">
+          <div class="wheel" id="wheel" aria-label="Ruota della roulette">
+            <div class="wheel-label" id="wheelLabel"><span>BET</span><strong>•</strong></div>
+            <div class="ball" id="ball"></div>
+          </div>
+        </div>
+        <div class="result" id="result" aria-live="polite">Piazza le fiches</div>
+        <button class="spin primary" id="spin">GIRA</button>
+        <p class="rng-note"><span class="lock">◆</span> Estrazione con <code>crypto.getRandomValues()</code></p>
+      </div>
+
+      <div class="table-panel panel">
+        <div class="section-head"><div><span class="eyebrow">TAVOLO</span><h1>Scegli le tue puntate</h1></div><div class="current-bet">Sul tavolo <strong id="totalBet">€ 0,00</strong></div></div>
+        <div class="roulette-table" id="table" aria-label="Tavolo delle puntate"></div>
+        <div class="chip-rack" aria-label="Selezione fiches">
+          <span class="rack-label">Fiches</span>
+          <button class="chip chip-2 selected" draggable="true" data-value="2" aria-label="Fiche da 2 euro">2</button>
+          <button class="chip chip-5" draggable="true" data-value="5" aria-label="Fiche da 5 euro">5</button>
+          <button class="chip chip-10" draggable="true" data-value="10" aria-label="Fiche da 10 euro">10</button>
+          <button class="chip chip-50" draggable="true" data-value="50" aria-label="Fiche da 50 euro">50</button>
+          <div class="table-actions">
+            <button id="clearBet">Ritira fiches</button>
+            <button id="repeatBet">Ripeti puntata</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="lower-grid">
+      <div class="panel history-panel"><div class="section-head"><div><span class="eyebrow">STORICO</span><h2>Ultimi 15 numeri</h2></div></div><div class="history" id="history"><span class="empty">Nessun giro</span></div></div>
+      <div class="panel stats-panel">
+        <div class="section-head"><div><span class="eyebrow">SESSIONE</span><h2>Bilancio</h2></div><button class="danger" id="reset">Azzera tutto</button></div>
+        <div class="stats">
+          <div><span>Vinto / perso</span><strong id="profit">€ 0,00</strong></div>
+          <div><span>Giri vinti</span><strong id="wins">0</strong></div>
+          <div><span>Giri persi</span><strong id="losses">0</strong></div>
+          <div><span>Totale puntato</span><strong id="wagered">€ 0,00</strong></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="depositDialog">
+    <form method="dialog" id="depositForm">
+      <span class="eyebrow">NUOVA SESSIONE</span><h2>Imposta il deposito</h2>
+      <p>Denaro virtuale, senza registrazione e senza pagamenti reali.</p>
+      <label for="deposit">Deposito iniziale (€)</label>
+      <input id="deposit" type="number" min="2" max="10000000" step="1" value="1000" required autofocus>
+      <button class="primary" value="confirm">Inizia a giocare</button>
+    </form>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>
