@@ -1,0 +1,7 @@
+@import url("montecarlo-v2.css");
+.table-panel{grid-column:2;grid-row:1}
+.results{grid-column:1;grid-row:2}
+.chart-panel{grid-column:2;grid-row:2;padding:18px}
+.chart-panel .chart-wrap{margin-top:0}
+.chart-panel #chart{height:230px}
+@media(max-width:1150px){.config{order:1}.table-panel{grid-column:1;grid-row:auto;order:2}.chart-panel{grid-column:1;grid-row:auto;order:3}.results{grid-column:1;grid-row:auto;order:4}}
