@@ -1,0 +1,5 @@
+@import url("montecarlo-v3.css");
+main{display:grid;grid-template-columns:1fr 1.65fr;align-items:start}
+.left-column,.right-column{display:flex;min-width:0;flex-direction:column;gap:18px}
+.config,.results,.table-panel,.chart-panel{grid-column:auto;grid-row:auto;order:initial}
+@media(max-width:1150px){main{display:flex;flex-direction:column}.left-column,.right-column{display:contents}.config{order:1}.table-panel{order:2}.chart-panel{order:3}.results{order:4}}
