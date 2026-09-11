@@ -1,4 +1,5 @@
 @import url("montecarlo-v4.css");
+#capField[hidden]{display:none}.strategy-note{grid-column:1/-1;margin:0;color:#a9bdb3;font-size:.74rem;line-height:1.35}#capField small{display:block;margin-top:4px;color:#8da69a;font-size:.65rem}
 .chart-wrap{position:relative}
 .axis-y line{stroke:#ffffff20;stroke-width:1}.axis-y line:first-child{stroke:#ffffff45}
 .axis-y text{fill:#b8c9c0;font:700 12px Inter,system-ui,sans-serif;text-anchor:end}
