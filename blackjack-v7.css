@@ -1,0 +1,10 @@
+@import url("blackjack-v6.css");
+
+.controls{align-items:flex-start}
+.deal-stack{display:flex;flex-direction:column;gap:8px}
+.deal-stack button{width:100%}
+.deal-stack #repeatBetTable{white-space:nowrap}
+@media(max-width:760px){
+  .controls{gap:6px}
+  .deal-stack{gap:6px}
+}
